@@ -1,0 +1,48 @@
+lang: de-DE
+csquotes: true
+
+documentclass: report
+classoption:
+  - a4paper
+  - ngerman
+  - 12pt
+  - twoside
+geometry:
+  - margin=2.5cm
+pagestyle: headings
+numbersections: true
+
+toc: true
+lot: true
+lof: true
+lol: true
+
+biblatex: true
+csl: ./resources/elsevier-harvard.csl
+bibliography: biblio.bib
+reference-section-title: Literaturverzeichnis
+
+title: My Big Fat Studienarbeit
+author: Studenty McStudentface
+type: Studienarbeit
+studentid: 69420
+
+company: true
+companyname: Enron Corporation
+companylocation: Omaha, Nebraska, USA
+companylogo: imgs/lipsum_logo_1
+companyadvisor: Advisory McAdvisorface
+
+deadline: Never
+duration: Forever
+
+schoolname: School of Accounting Magic
+schoollogo: imgs/lipsum_logo_2
+schooladvisor: Ädvisör Ädvisörsson
+
+degreetype: Bachelor
+subject: Creative Bookkeeping
+courseid: WTF420BBQ
+
+statement: true
+nda: false

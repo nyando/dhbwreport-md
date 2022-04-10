@@ -1,0 +1,165 @@
+\usepackage{lipsum}
+\usepackage{framed}
+\usepackage{setspace}
+
+% define default code listing style
+\lstdefinestyle{dhpaperdefault}{
+    basicstyle=\linespread{1.0}\normalsize\ttfamily,
+    keepspaces=false,
+    keywordstyle=\color{red},
+    identifierstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{orange},
+    columns=flexible
+}
+
+% title page content
+\makeatletter
+\newcommand*{\projecttitle}[1]{\gdef\@projecttitle{#1}}
+\newcommand*{\@projecttitle}{Titel}
+\newcommand*{\projecttype}[1]{\gdef\@projecttype{#1}}
+\newcommand*{\@projecttype}{Projektarbeit}
+\newcommand*{\projectauthor}[1]{\gdef\@projectauthor{#1}}
+\newcommand*{\@projectauthor}{Vorname Nachname}
+\newcommand*{\studentid}[1]{\gdef\@studentid{#1}}
+\newcommand*{\@studentid}{Matrikelnummer}
+
+\newcommand*{\companyname}[1]{\gdef\@companyname{#1}}
+\newcommand*{\@companyname}{Firmenname}
+\newcommand*{\companylocation}[1]{\gdef\@companylocation{#1}}
+\newcommand*{\@companylocation}{Firmensitz}
+\newcommand*{\companylogo}[1]{\gdef\@companylogo{#1}}
+\newcommand*{\@companylogo}{lion}
+\newcommand*{\companyadvisor}[1]{\gdef\@companyadvisor{#1}}
+\newcommand*{\@companyadvisor}{Vorname Nachname}
+
+\newcommand*{\schoolname}[1]{\gdef\@schoolname{#1}}
+\newcommand*{\@schoolname}{Dualen Hochschule Baden-Württemberg Karlsruhe}
+\newcommand*{\schoollogo}[1]{\gdef\@schoollogo{#1}}
+\newcommand*{\@schoollogo}{dhbw-logo}
+\newcommand*{\schooladvisor}[1]{\gdef\@schooladvisor{#1}}
+\newcommand*{\@schooladvisor}{Vorname Nachname}
+
+\newcommand*{\deadline}[1]{\gdef\@deadline{#1}}
+\newcommand*{\@deadline}{01.01.1970}
+\newcommand*{\duration}[1]{\gdef\@duration{#1}}
+\newcommand*{\@duration}{1000 Jahre}
+
+\newcommand*{\degreetype}[1]{\gdef\@degreetype{#1}}
+\newcommand*{\@degreetype}{Professor of Science}
+\newcommand*{\subject}[1]{\gdef\@subject{#1}}
+\newcommand*{\@subject}{Universalwissenschaften}
+\newcommand*{\courseid}[1]{\gdef\@courseid{#1}}
+\newcommand*{\@courseid}{WTF19BBQ}
+
+% redefine maketitle command to create a neato title page
+\newcommand*{\maketitlepage}{
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{-2cm}
+            {\includegraphics[width=4cm]{\@companylogo}\hfill\includegraphics[width=4cm]{\@schoollogo}} \\
+            \vspace*{2cm}
+            {\Huge \@projecttitle} \\
+            \vspace*{1cm}
+            {\Huge\scshape \@projecttype} \\
+            \vspace*{1cm}
+            {\large für die Prüfung zum} \\
+            \vspace*{0.5cm}
+            {\Large \@degreetype} \\
+            \vspace*{0.5cm}
+            {\large des Studienganges \@subject} \\
+            \vspace*{0.5cm}
+            {\large an der} \\
+            \vspace*{0.5cm}
+            {\large \@schoolname} \\
+            \vspace*{0.5cm}
+            {\large von} \\
+            \vspace*{0.5cm}
+            {\large\bfseries \@projectauthor} \\
+            \vspace*{1cm}
+            {\large Abgabedatum \@deadline} \\
+            \vfill
+        \end{center}
+        \begin{tabular}{l@{\hspace{2cm}}l}
+            Bearbeitungszeitraum          & \@duration         \\
+            Matrikelnummer                & \@studentid        \\
+            Kurs                          & \@courseid         \\
+            Ausbildungsfirma              & \@companyname      \\
+                                          & \@companylocation  \\
+            Betreuer der Ausbildungsfirma & \@companyadvisor   \\
+            Gutachter der Studienakademie & \@schooladvisor      \\
+        \end{tabular}
+    \end{titlepage}
+}
+
+% redefine maketitle command to create a neato title page
+\newcommand*{\nocompanytitlepage}{
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{-2cm}
+            {\hfill\includegraphics[width=4cm]{\@schoollogo}} \\
+            \vspace*{2cm}
+            {\Huge \@projecttitle} \\
+            \vspace*{1cm}
+            {\Huge\scshape \@projecttype} \\
+            \vspace*{1cm}
+            {\large für die Prüfung zum} \\
+            \vspace*{0.5cm}
+            {\Large \@degreetype} \\
+            \vspace*{0.5cm}
+            {\large des Studienganges \@subject} \\
+            \vspace*{0.5cm}
+            {\large an der} \\
+            \vspace*{0.5cm}
+            {\large \@schoolname} \\
+            \vspace*{0.5cm}
+            {\large von} \\
+            \vspace*{0.5cm}
+            {\large\bfseries \@projectauthor} \\
+            \vspace*{1cm}
+            {\large Abgabedatum \@deadline} \\
+            \vfill
+        \end{center}
+        \begin{tabular}{l@{\hspace{2cm}}l}
+            Bearbeitungszeitraum          & \@duration         \\
+            Matrikelnummer                & \@studentid        \\
+            Kurs                          & \@courseid         \\
+            Gutachter der Studienakademie & \@schooladvisor      \\
+        \end{tabular}
+    \end{titlepage}
+}
+
+% statement of originality
+\newcommand*{\makestatement}{
+    \newpage
+    \thispagestyle{empty}
+    \begin{framed}
+    \begin{center}
+    \Large\bfseries Erklärung
+    \end{center}
+    \medskip
+    \noindent
+    Ich versichere hiermit, dass ich meine \@projecttype\ mit dem Thema:
+    \enquote{\@projecttitle}
+    selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
+    Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.
+
+    \vspace{3cm}
+    \noindent
+    \underline{\hspace{4cm}}\hfill\underline{\hspace{6cm}}\\
+    Ort~~~~~Datum\hfill Unterschrift\hspace{4cm}
+    \end{framed}
+}
+
+% confidentiality statement
+\newcommand*{\makenda}{
+    \vfill
+    \begin{framed}
+    \begin{center}
+    \Large\bfseries Sperrvermerk
+    \end{center}
+    \medskip
+    \noindent
+    Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen Personen außerhalb des Prüfungsprozesses und des Evaluationsverfahrens zugänglich gemacht werden, sofern keine anderslautende Genehmigung vom Dualen Partner vorliegt.
+    \end{framed}
+}
