@@ -1,6 +1,8 @@
+# language options
 lang: de-DE
 csquotes: true
 
+# layout options
 documentclass: report
 classoption:
   - a4paper
@@ -12,26 +14,23 @@ geometry:
 pagestyle: headings
 numbersections: true
 
+# table of contents, list of tables, figures, listings
 toc: true
 lot: true
 lof: true
 lol: true
 
+# bibliography options
 biblatex: true
 csl: ./resources/elsevier-harvard.csl
 bibliography: biblio.bib
 reference-section-title: Literaturverzeichnis
 
+# title page information
 title: My Big Fat Studienarbeit
 author: Studenty McStudentface
 type: Studienarbeit
 studentid: 69420
-
-company: true
-companyname: Enron Corporation
-companylocation: Omaha, Nebraska, USA
-companylogo: imgs/lipsum_logo_1
-companyadvisor: Advisory McAdvisorface
 
 deadline: Never
 duration: Forever
@@ -44,5 +43,14 @@ degreetype: Bachelor
 subject: Creative Bookkeeping
 courseid: WTF420BBQ
 
+# company info
+# set "company: false" to remove this information from title page
+company: true
+companyname: Enron Corporation
+companylocation: Omaha, Nebraska, USA
+companylogo: imgs/lipsum_logo_1
+companyadvisor: Advisory McAdvisorface
+
+# statement of originality and NDA, set "true" to show, false otherwise
 statement: true
 nda: false

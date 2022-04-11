@@ -16,7 +16,7 @@ clean:
     # rm -f ./imgs/drawio/*.pdf
     rm -f ./output.pdf
 
-# draw.io
+# draw.io - use this to autogenerate drawio diagrams from the DIAGS_SRC directory
 # DIAGS_SRC := "./imgs/drawio"
 
 # diags:
