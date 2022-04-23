@@ -30,6 +30,16 @@ Hier kommt der "Hauptteil".
 In den Hauptteil kommt die eigene Arbeit, die gemacht wurde.
 Planung und Implementierung von Softwareprojekten, oder sowas [@knuth84].
 
+Hier noch ein paar Abkürzungen und Glossareinträge:
+
+- \acrfull{wtf}
+- \acrfull{gnu}
+- \acrfull{rtfm}
+- \acrfull{fubar}
+- \gls{report}
+- \gls{programminglanguage}
+- \gls{dummy}
+
 ![Ein anderes Logo](./imgs/lipsum_logo_1.pdf)
 
 ## Lorem

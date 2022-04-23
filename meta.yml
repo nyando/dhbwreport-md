@@ -20,6 +20,15 @@ lot: true
 lof: true
 lol: true
 
+# glossary options
+glossary: true
+glossaryfile: glossary.tex
+glossarytitle: Glossar
+
+# acronym options
+acronyms: true
+acronymtitle: Abkürzungsverzeichnis
+
 # bibliography options
 biblatex: true
 csl: ./resources/elsevier-harvard.csl

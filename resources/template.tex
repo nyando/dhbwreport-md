@@ -408,6 +408,16 @@ $else$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
+% glossary settings
+$if(glossary)$
+\usepackage[acronyms]{glossaries}
+\makenoidxglossaries
+$if(glossaryfile)$
+\include{$glossaryfile$}
+\glstoctrue
+$endif$
+$endif$
+
 % project details
 $if(title)$
 \projecttitle{$title$}
@@ -570,6 +580,13 @@ $if(frontmatter-roman)$
 \pagenumbering{roman}
 \setcounter{page}{4}
 \appendix
+$endif$
+
+$if(glossary)$
+\printnoidxglossary[title={$glossarytitle$},sort=word,nonumberlist]
+$endif$
+$if(acronyms)$
+\printnoidxglossary[title={$acronymtitle$},type=\acronymtype,sort=word,nonumberlist]
 $endif$
 
 $for(include-after)$
