@@ -22,7 +22,7 @@ lol: true
 
 # glossary options
 glossary: true
-glossaryfile: glossary.tex
+glsacrofile: glossary.tex
 glossarytitle: Glossar
 
 # acronym options

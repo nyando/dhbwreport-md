@@ -61,3 +61,21 @@ To use a Draw.io diagram in your report, simply include it as a PDF image:
 Set `DIAGS_SRC := "./path/to/drawio"` in your `justfile`.
 Make sure to comment in the `diags` recipe and set it as a dependency on the `pdf` recipe.
 During compilation, the source `drawio` diagram files will be compiled to PDF and integrated into your report.
+
+## Glossaries and Acronyms
+
+To use a glossary and acronym listing, set the variables `glossary` and `acronym`, respectively.
+You can use the terms in your glossary with the LaTeX-Macro `\gls{term}` and the acronyms with
+`\acrfull{term}`, `\acrshort{term}`, or `\acrlong{term}`.
+Note that terms will only show up in the listing if they're actually referenced in the text.
+
+```yaml
+# glossary options
+glossary: true
+glsacrofile: glossary.tex
+glossarytitle: Glossar
+
+# acronym options
+acronyms: true
+acronymtitle: Abkürzungsverzeichnis
+```

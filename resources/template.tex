@@ -412,10 +412,14 @@ $endif$
 $if(glossary)$
 \usepackage[acronyms]{glossaries}
 \makenoidxglossaries
-$if(glossaryfile)$
-\include{$glossaryfile$}
-\glstoctrue
+$elseif(acronyms)$
+\usepackage[acronyms]{glossaries}
+\makenoidxglossaries
 $endif$
+
+$if(glsacrofile)$
+\include{$glsacrofile$}
+\glstoctrue
 $endif$
 
 % project details
