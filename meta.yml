@@ -63,3 +63,6 @@ companyadvisor: Advisory McAdvisorface
 # statement of originality and NDA, set "true" to show, false otherwise
 statement: true
 nda: false
+
+abstract:
+  Hier schön kurz und knackig, bitte!
